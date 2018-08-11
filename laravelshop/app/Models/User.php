@@ -19,7 +19,7 @@ class User extends Authenticatable
     ];
 
     protected $casts = [
-        'eml_verified' => 'boolean'
+        'email_verified' => 'boolean'
     ];
 
     /**
