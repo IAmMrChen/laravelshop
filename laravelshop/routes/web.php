@@ -23,5 +23,12 @@ Route::group(['middleware' => 'auth'], function() {
     Route::group(['middleware' => 'email_verified'], function() {
         Route::get('user_addresses', 'UserAddressesController@index')->name('user_addresses.index');
         Route::get('user_addresses/create', 'UserAddressesController@create')->name('user_addresses.create');
+<<<<<<< HEAD
+=======
+        Route::post('user_addresses', 'UserAddressesController@store')->name('user_addresses.store');
+        Route::get('user_addresses/{user_address}', 'UserAddressesController@edit')->name('user_addresses.edit');
+        Route::put('user_addresses/{user_address}', 'UserAddressesController@update')->name('user_addresses.update');
+        Route::delete('user_addresses/{user_address}', 'UserAddressesController@destroy')->name('user_addresses.destroy');
+>>>>>>> 6900f314b6a552aa6b638fc3c13c5c2b7b06b075
     });
 });
