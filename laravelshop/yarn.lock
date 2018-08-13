@@ -6705,7 +6705,7 @@ svgo@^1.0.0:
 
 sweetalert@^2.1.0:
   version "2.1.0"
-  resolved "https://registry.npmjs.org/sweetalert/-/sweetalert-2.1.0.tgz#d605dec840058fa8ad4a1f7c2c8c194bc72c27fa"
+  resolved "http://registry.npm.taobao.org/sweetalert/download/sweetalert-2.1.0.tgz#d605dec840058fa8ad4a1f7c2c8c194bc72c27fa"
   dependencies:
     es6-object-assign "^1.1.0"
     promise-polyfill "^6.0.2"
