@@ -11,4 +11,8 @@ class UserAddressesController extends Controller
             'addresses' => $request->user()->addresses,
         ]);
     }
+
+   	public function create () {
+        return view('user_addresses.create_and_edit', ['address' => new UserAddress()]);
+    }
 }
