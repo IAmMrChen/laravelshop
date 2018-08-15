@@ -13,13 +13,13 @@ class CreateCartItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('cart_items', function (Blueprint $table) {
-            $table->unsignedInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedInteger('product_sku_id');
-            $table->foreign('product_sku_id')->references('id')->on('product_skus')->onDelete('cascade');
-            $table->unsignedInteger('amount');
-        });
+        // Schema::create('cart_items', function (Blueprint $table) {
+        //     $table->unsignedInteger('user_id');
+        //     $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        //     $table->unsignedInteger('product_sku_id');
+        //     $table->foreign('product_sku_id')->references('id')->on('product_skus')->onDelete('cascade');
+        //     $table->unsignedInteger('amount');
+        // });
     }
 
     /**
