@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use App\Models\Order;
+use App\Jobs\CloseOrder;
 use App\Models\ProductSku;
 use App\Models\UserAddress;
 use Illuminate\Http\Request;
@@ -11,7 +12,7 @@ use App\Http\Requests\OrderRequest;
 
 class OrdersController extends Controller
 {
-    public function store (OrderRequest $request) {
+    public function store (Request $request) {
         $user  = $request->user();
         // 开启一个数据库事务
         $order = \DB::transaction(function () use ($user, $request) {
@@ -64,6 +65,8 @@ class OrdersController extends Controller
 
             return $order;
         });
+
+        $this->dispatch(new CloseOrder($order, config('app.order_ttl')));
 
         return $order;
     }
