@@ -42,3 +42,12 @@ Route::group(['middleware' => 'auth'], function() {
 });
 // 这个路由和收藏列表的路由‘products/favorites’冲突，所以放到下面
 Route::get('products/{product}', 'ProductsController@show')->name('products.show');
+
+
+Route::get('alipay', function() {
+    return app('alipay')->web([
+        'out_trade_no' => time(),
+        'total_amount' => '1',
+        'subject' => 'test subject - 测试',
+    ]);
+});
