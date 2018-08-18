@@ -2,14 +2,14 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Product;
-use App\Http\Controllers\Controller;
-use Encore\Admin\Controllers\ModelForm;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
+use Encore\Admin\Show;
+use App\Models\Product;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
-use Encore\Admin\Show;
+use App\Http\Controllers\Controller;
+use Encore\Admin\Controllers\ModelForm;
 
 class ProductsController extends Controller
 {

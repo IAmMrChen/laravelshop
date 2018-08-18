@@ -42,6 +42,9 @@ Route::group(['middleware' => 'auth'], function() {
         Route::get('payment/alipay/return', 'PaymentController@alipayReturn')->name('payment.alipay.return');
         Route::post('orders/{order}/received', 'OrdersController@received')->name('orders.received');
 
+        Route::get('orders/{order}/review', 'OrdersController@review')->name('orders.review.show');
+        Route::post('orders/{order}/review', 'OrdersController@sendReview')->name('orders.review.store');
+
     });
 });
 // 这个路由和收藏列表的路由‘products/favorites’冲突，所以放到下面
