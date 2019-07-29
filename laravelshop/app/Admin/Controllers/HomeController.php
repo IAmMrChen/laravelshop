@@ -36,4 +36,12 @@ class HomeController extends Controller
             });
         });
     }
+
+    public function test () {
+
+    }
+
+    public function testTow () {
+        
+    }
 }
