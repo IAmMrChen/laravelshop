@@ -42,6 +42,10 @@ class HomeController extends Controller
     }
 
     public function testTow () {
+
+    }
+
+    public function testThree () {
         
     }
 }
